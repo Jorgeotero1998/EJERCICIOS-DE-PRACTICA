@@ -1,0 +1,152 @@
+:root {
+  --negro: #0f0f0f;
+  --gris-fondo: #1c1c1c;
+  --gris-input: #2a2a2a;
+  --gris-borde: #3a3a3a;
+  --amarillo: #f5c518;
+  --blanco: #ffffff;
+  --gris-texto: #bdbdbd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #1a1a1a 40%,
+    #2a2a2a 100%
+  );
+}
+
+
+.login-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.login-box {
+  width: 360px;
+  background-color: var(--gris-fondo);
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+}
+
+
+.login-box h2 {
+  color: var(--blanco);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: var(--gris-texto);
+  pointer-events: none;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  background-color: var(--gris-input);
+  border: 1px solid var(--gris-borde);
+  border-radius: 6px;
+  color: var(--blanco);
+  font-size: 0.95rem;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--amarillo);
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  background-color: var(--amarillo);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #e0b300;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+
+.forgot {
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.forgot a {
+  color: var(--amarillo);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.social p {
+  color: var(--gris-texto);
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icons i {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--gris-borde);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanco);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icons i:hover {
+  background-color: var(--amarillo);
+  color: var(--negro);
+  border-color: var(--amarillo);
+}
